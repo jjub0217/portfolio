@@ -1,0 +1,178 @@
+.footer {
+  position: relative;
+  padding-top: 20px;
+  font-family: "Neue Montreal", sans-serif;
+  .headline_wrap {
+    padding-bottom: 20vh;
+    @include tablet {
+      font-size: 30px;
+    }
+    .headline {
+      color: #707273;
+    }
+    .headline,
+    .mail_link {
+      font-size: 72px;
+      font-weight: 100;
+      @include tablet {
+        font-size: 30px;
+      }
+    }
+
+    .mail_link {
+      color: #fff;
+      position: relative;
+      transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+      &::before {
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        z-index: -1;
+        transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      &:hover {
+        color: #000;
+        &::before {
+          background-color: #fff;
+          height: 100%;
+        }
+      }
+    }
+  }
+  .profile_wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .left_box {
+    width: 50%;
+    @include tablet {
+      width: 100%;
+    }
+    .title {
+      font-size: 32px;
+      color: #fff;
+      line-height: 1.05;
+      @include tablet {
+        font-size: 22px;
+      }
+    }
+  }
+  .right_box {
+    color: #ffffffcc;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .title {
+      font-size: 18px;
+      line-height: 1.8;
+      letter-spacing: 0.2px;
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+    .profile_list {
+      display: flex;
+      flex-direction: column;
+    }
+    .profile_item {
+      margin: 5px 0px;
+      padding: 4px 0px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      line-height: 1;
+      letter-spacing: 0.2px;
+      font-size: 18px;
+      &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        display: inline-block;
+        background-color: #ffffffcc;
+      }
+      &:hover {
+        font-family: "DotGothic16", sans-serif;
+        color: #ffff01;
+        text-decoration: underline;
+      }
+      span {
+        pointer-events: none;
+      }
+      .gothic {
+        font-family: "DotGothic16" !important;
+      }
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+  }
+  .more_area {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .log_more {
+    padding: 10px;
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color: #91919133;
+    border-radius: 50px;
+    color: #fff;
+    line-height: 1;
+    gap: 10px;
+    margin-top: 24px;
+    transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+      font-size: 14px;
+    }
+  }
+  .more_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 200px;
+    background-color: #000000;
+  }
+
+  .text_marquee {
+    font-family: "Pixgame", serif;
+    font-size: 23vw;
+    color: #252525;
+    padding-top: 20vw;
+  }
+  .to_right,
+  .to_left {
+    display: flex;
+    gap: 5px;
+    overflow: hidden;
+  }
+  .to_right_text,
+  .to_left_text {
+    line-height: 0.7;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,56 @@
+.blind {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+.wrapper {
+  margin: 0 auto;
+  min-width: 320px;
+}
+
+.inner {
+  margin: 0 auto;
+  padding: 0 3vw;
+}
+
+#skip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #ccc;
+    color: #000;
+    transform: translateY(-100%);
+
+    &:focus,
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+.scroll_top {
+  position: fixed;
+  right: 12px;
+  bottom: 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.scroll_hide {
+  overflow: hidden;
+}

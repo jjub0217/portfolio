@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Suisse", sans-serif;
+  letter-spacing: 0;
+  background-color: #080014;
+  color: #c9c3d1;
+}
+
+fieldset {
+  border: 0;
+}
+
+input,
+button {
+  outline: none;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+::selection {
+  background: #ff00e5;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: var(--accent-color);
+  color: #fff;
+}

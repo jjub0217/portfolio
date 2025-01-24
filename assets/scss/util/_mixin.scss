@@ -1,0 +1,68 @@
+$desktop: 1440px;
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+$tablet: 920px;
+
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+$smallDevice: 480px;
+
+@mixin smallDevice {
+  @media screen and (max-width: $smallDevice) {
+    @content;
+  }
+}
+
+$mobile: 850px;
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin ellipse($line: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if ($line > 1) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  } @else {
+    white-space: nowrap;
+  }
+}
+
+@keyframes opacityAni {
+  from {
+    display: block;
+  }
+
+  to {
+    display: none;
+  }
+}
+
+@keyframes loader-sync {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
