@@ -162,7 +162,6 @@ const inTroTl = gsap.timeline({
 inTroTl
 .to(".section_slogan", { opacity: 0 })
 
-
 const introductionpageTl = gsap.timeline({
   scrollTrigger: {
     trigger: ".projects_wrap",
@@ -172,7 +171,6 @@ const introductionpageTl = gsap.timeline({
     markers: false,
   },
 });
-
 
 introductionpageTl
   .to(".projects_wrap .section_project:nth-child(2)", { width: "100%" }, "a")
