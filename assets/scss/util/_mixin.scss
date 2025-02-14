@@ -6,7 +6,7 @@ $desktop: 1440px;
   }
 }
 
-$tablet: 920px;
+$tablet: 991px;
 
 @mixin tablet {
   @media screen and (max-width: $tablet) {
