@@ -819,50 +819,6 @@ section {
      object-fit: cover;
 }
 
-._1 {
-  background-color: red;
-}
-
-._2 {
-  background-color: yellow;
-}
-
-._3 {
-  background-color: brown;
-}
-
-._4 {
-  background-color: pink;
-}
-
-._5 {
-  background-color: palevioletred;
-}
-
-._6 {
-  background-color: orange;
-}
-
-._7 {
-  background-color: palegreen;
-}
-
-._8 {
-  background-color: purple;
-}
-
-._9 {
-  background-color: greenyellow;
-}
-
-._10 {
-  background-color: darkcyan;
-}
-
-._11 {
-  background-color: lightcoral;
-}
-
 .section_log {
   height: 100%;
   padding: 120px 0 140px;
