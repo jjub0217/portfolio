@@ -285,116 +285,67 @@ createSwiper(".section_log .swiper", {
 const goalArea = gsap.utils.toArray(".goal_area");
 const goalHeadline = document.querySelector(".section_goal .headline_wrap");
 
-  ScrollTrigger.matchMedia({
-    "(min-width: 921px)": function () {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".section_goal .headline_wrap",
-          start: "0% 20%",
-          end: `+=${(goalArea.length - 1) * window.innerHeight}`,
-          pin: true,
-          pinSpacing: false,
-          scrub: 1,
-          markers: false,
-        },
-      });
-      goalArea.forEach((element, index) => {
-        if (index !== goalArea.length - 1) {
-          const timeline = gsap.timeline({
-            scrollTrigger: {
-              trigger: element,
-              start: "0% 20%",
-              end: "bottom 20%",
-              pin: true,
-              pinSpacing: false,
-              scrub: 1,
-              markers: false,
-            },
-          });
-          timeline.to(element, { opacity: 0 });
-        }
-      });
-    },
-    "(max-width: 920px)": function () {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".section_goal .headline_wrap",
-          start: "0% 15%",
-          end: `+=${(goalArea.length - 1) * window.innerHeight}`,
-          pin: true,
-          pinSpacing: false,
-          scrub: 1,
-          markers: false,
-        },
-      });
-      goalArea.forEach((element, index) => {
-        if (index !== goalArea.length - 1) {
-          const timeline = gsap.timeline({
-            scrollTrigger: {
-              trigger: element,
-              start: "0% 45%",
-              end: "100% 0%",
-              pin: true,
-              pinSpacing: false,
-              scrub: 1,
-              markers: false,
-              onEnter: () => console.log(index),
-            },
-          });
-          timeline.to(element, { opacity: 0 });
-        }
-      });
-    },
-  });
-
-// goalArea.forEach((element, index) => {
-//   if (index !== goalArea.length - 1) {
-//     const timeline = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: element,
-//         start: "0% 20%",
-//         end: "bottom 20%",
-//         pin: true,
-//         pinSpacing: false,
-//         scrub: 1,
-//         markers: true,
-//       },
-//     });
-//     timeline.to(element, { opacity: 0 });
-//   }
-// });
-
-
-// goalArea.forEach((element, index) => {
-//   if (index !== goalArea.length - 1) {
-//     const timeline = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: element,
-//         start: "0% 50%",
-//         end: "bottom 50%",
-//         pin: true,
-//         pinSpacing: false,
-//         scrub: 1,
-//         markers: true,
-//       },
-//     });
-//     timeline.to(element, { opacity: 0 });
-//   }
-// });
-// goalArea.forEach((area, index) => {
-//   if (index !== goalArea.length - 1) {
-//   const timeline = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: area,
-//       start: "top center", 
-//       end: "bottom center", 
-//       scrub: true,
-//       markers: true,
-//     },
-//   });
-//   timeline.to(area, { opacity: 0});
-//   }
-// });
+ScrollTrigger.matchMedia({
+  "(min-width: 921px)": function () {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section_goal .headline_wrap",
+        start: "0% 20%",
+        end: `+=${(goalArea.length - 1) * window.innerHeight}`,
+        pin: true,
+        pinSpacing: false,
+        scrub: 1,
+        markers: false,
+      },
+    });
+    goalArea.forEach((element, index) => {
+      if (index !== goalArea.length - 1) {
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: element,
+            start: "0% 20%",
+            end: "bottom 20%",
+            pin: true,
+            pinSpacing: false,
+            scrub: 1,
+            markers: false,
+          },
+        });
+        timeline.to(element, { opacity: 0 });
+      }
+    });
+  },
+  "(max-width: 920px)": function () {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section_goal .headline_wrap",
+        start: "0% 15%",
+        end: `+=${(goalArea.length - 1) * window.innerHeight}`,
+        pin: true,
+        pinSpacing: false,
+        scrub: 1,
+        markers: false,
+      },
+    });
+    goalArea.forEach((element, index) => {
+      if (index !== goalArea.length - 1) {
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: element,
+            start: "0% 45%",
+            end: "100% 0%",
+            pin: true,
+            pinSpacing: false,
+            scrub: 1,
+            markers: false,
+            onEnter: () => console.log(index),
+          },
+        });
+        timeline.to(element, { opacity: 0 });
+      }
+    });
+  },
+});
 
 const panels = document.querySelectorAll(".to_right_text");
 const topPanel = document.querySelector(".to_right");
